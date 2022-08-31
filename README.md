@@ -3,7 +3,7 @@
 Implementation of a kernel module that provides a new IPC mechanism - message slot.  
 Written in C as an assignment in operating-systems course (Tel Aviv University).
 
-# Assignments goal
+# Main purpose
 
 The goal of this assignment is to gain experience with kernel inter-process communication (IPC), kernel modules and drivers.  
 In general: drivers -> have message slot device files -> each has multiple message channels -> that can be used by multiple processes.  
