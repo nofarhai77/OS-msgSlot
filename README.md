@@ -5,6 +5,7 @@ Implementation of a kernel module that provides a new IPC mechanism - message sl
 # Assignments goal
 
 The goal of this assignment is to gain experience with kernel inter-process communication (IPC), kernel modules and drivers.  
+In general: drivers -> have message slot device files -> each has multiple message channels -> that can be used by multiple processes.  
   
 1. A message slot is a character device file which processes communicate through.
 2. A message slot device has multiple message channels active concurrently, which can be used by multiple processes.
@@ -12,8 +13,6 @@ The goal of this assignment is to gain experience with kernel inter-process comm
 4. It subsequently uses read()/write() to receive/send messages on the channel.
 5. In contrast to pipes, a message channel preserves a message until it is overwritten.  
   
-In general: drivers -> have message slot device files -> each has multiple message channels -> that can be used by multiple processes.
-
 # Properties
 
 1. All message slot files have the same major number in this hw - 240.
